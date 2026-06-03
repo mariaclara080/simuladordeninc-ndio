@@ -1,1 +1,26 @@
+/* ==========================================================================
+   1. CENTRAL DE VARIÁVEIS (:root) - PALETA AGRO & SUSTENTABILIDADE
+   ========================================================================== */
+:root {
+    /* Cores Principais (Alto Contraste e Temática Agro/Alerta) */
+    --color-primary-dark: #1b4332;  /* Verde Floresta Profundo (Sustentabilidade/Base) */
+    --color-accent-fire: #d90429;   /* Vermelho Alerta Vivo (Fogo/Atenção) */
+    --color-accent-earth: #f4a261;  /* Tom Terroso/Palha (Solo/Manejo) */
+    
+    /* Cores de Fundo e Superfície */
+    --color-bg-main: #f4f7f6;       /* Cinza Claro Ecológico (Conforto Visual) */
+    --color-surface: #ffffff;        /* Branco Puro para Cards e Contêineres */
+    
+    /* Cores de Texto */
+    --color-text-dark: #212529;     /* Grafite Escuro (Excelente Legibilidade) */
+    --color-text-muted: #495057;    /* Grafite Médio para Dicas/Subtítulos */
+    --color-text-light: #ffffff;    /* Texto Claro para Contrastar com Fundos Escuros */
+    
+    /* Cores de Feedback */
+    --color-error-bg: #ffe3e3;      /* Fundo suave para Alertas de Erro */
+    --color-error-text: #b7094c;    /* Texto crítico para validação */
+    --color-success-bg: #d8f3dc;    /* Fundo suave para Diagnóstico Seguro */
+    --color-success-text: #1b4332;  /* Texto de Sucesso */
 
+    /* Espaçamentos e Bordas (Consistência Visual) */
+    --radius
