@@ -1,1 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrevenAgro - Simulador de Prevenção a Incêndios Rurais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+    <header class="main-header">
+        <div class="header-container">
+            <h1>PrevenAgro 🔥🌾</h1>
+            <p>Concurso Agrinho 2026 | Agro forte, futuro sustentável</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        
+        <section class="intro-section">
+            <h2>Simulador de Diagnóstico e Prevenção de Incêndios</h2>
+            <p>
+                Produtor rural, avalie o nível de vulnerabilidade da sua propriedade face aos incêndios florestais. 
+                Preencha o formulário abaixo com as características atuais da sua fazenda para gerar um plano de ação preventivo instantâneo.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <form id="simulador-form" novalidate>
+                
+                <fieldset class="form-group">
+                    <legend>1. Manejo da Terra e Combustível Vegetal</legend>
+                    <label for="input-palhada">Quantidade estimada de palhada exposta (em hectares):</label>
+                    <input type="number" id="input-palhada" name="palhada" min="0" placeholder="Ex: 50" required>
+                    <p class="input-hint">A palhada seca após a colheita atua como combustível de alta propagação.</p>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>2. Fatores de Risco Externo</legend>
+                    <label for="select-rodovia">A propriedade faz divisa ou está próxima a rodovias/vias públicas?</label>
+                    <select id="select-rodovia" name="rodovia" required>
+                        <option value="" disabled selected>Selecione uma opção...</option>
+                        <option value="alta">Sim, colada a rodovias movimentadas (alto risco de bitucas/faíscas)</option>
+                        <option value="media">Próxima a estradas rurais secundárias</option>
+                        <option value="baixa">Isolada de vias públicas de grande fluxo</option>
+                    </select>
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <legend>3. Infraestrutura e Recursos de Combate</legend>
+                    <p class="label-fake">Marque os recursos que sua propriedade possui IMEDIATAMENTE disponíveis:</p>
+                    
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="check-tanque" name="recursos" value="tanque">
+                        <label for="check-tanque">Reserva/Tanque de água móvel ou fixo acessível</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="check-trator" name="recursos" value="trator">
+                        <label for="check-trator">Trator equipado com grade para abertura de aceiros</label>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="check-EPI" name="recursos" value="epi">
+                        <label for="check-EPI">Equipamentos de Proteção Individual (EPI) e abafadores</label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" id="btn-calcular" class="btn-primary">Gerar Plano de Ação Preventivo</button>
+            </form>
+        </section>
+
+        <section id="error-container" class="error-box" aria-live="assertive" hidden></section>
+
+        <section id="result-container" class="result-box" hidden>
+            <h3>📊 Diagnóstico da Propriedade</h3>
+            <div id="resultado-status"></div>
+            <article id="plano-acao" class="plano-artigo">
+                </article>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2026 PrevenAgro - Desenvolvido para o Concurso Agrinho. Tecnologia a serviço do campo sustentável.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
